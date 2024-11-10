@@ -30,7 +30,7 @@ This portfolio website will showcase essential personal information, projects, a
 Clone the repository and set up a virtual environment:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/ezekielsiniishaya/Django_Portfolio_WebApp
 cd Django_Portfolio_WebApp
 python -m venv env
 source env/bin/activate  # or `env\Scripts\activate` on Windows
