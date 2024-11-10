@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 173, 96, 0.6),
+    rgba(237, 113, 168, 0.6)
+  );
+  clip-path: circle(80% at 20% 80%);
+  z-index: -1;
+}
+.navbar {
+  text-align: center;
+  padding: 15px;
+  background-color: #000000;
+}
+
+.nav-links {
+  list-style-type: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 320px; /* Adjust to control container size */
+  height: 320px; /* Keep dimensions equal for circle */
+  border-radius: 50%; /* Circular container */
+  overflow: hidden; /* Ensures only the image within the circle shows */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  border: 4px solid #fff; /* White border for contrast */
+}
+
+.image-container img {
+  width: 100%; /* Ensures image fully fills container */
+  height: auto; /* Maintains aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.image-container img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .image-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.info-container {
+  margin-left: 20px;
+  max-width: 500px;
+}
+
+.info-container h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.info-container p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+.material-icons {
+  font-size: 20px;
+  color: white;
+  vertical-align: middle;
+  align-items: left;
+}
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally within contact-section */
+  justify-content: center; /* Center items vertically within contact-section */
+  flex-grow: 1;
+  padding: 20px;
+  margin-bottom: 0rem; /* Set max width to prevent content from stretching too much */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: rem;
+}
+
+.contact-section p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0073b1; /* Customize to your preferred accent color */
+}
+
+.social-links .material-icons {
+  font-size: 23px;
+  color: rgb(15, 110, 173);
+  vertical-align: middle;
+  align-items: left;
+}

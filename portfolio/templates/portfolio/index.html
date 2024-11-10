@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Concert+One&family=Nanum+Myeongjo:wght@400;700;800&family=Playpen+Sans:wght@100..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}"><span class="material-icons">home</span> Home</a></li>
+            <li><a href="{% url 'about' %}"><span class="material-icons">info</span> About</a></li>
+            <li><a href="{% url 'projects' %}"><span class="material-icons">build</span> Projects</a></li>
+            <li><a href="{% url 'contact' %}"><span class="material-icons">mail</span> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="gradient-overlay"></div>
+    <!-- Main Content -->
+    <section class="main-content">
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="{% static 'portfolio/images/profile.jpg' %}" alt="Profile Picture">
+        </div>
+
+        <!-- Information Section -->
+        <div class="info-container">
+            <h1>Hello, I'm Ezekiel.</h1>
+            <p>Welcome to my portfolio website. Here you’ll find my projects, experience, and ways to connect.</p>
+            <a href="{% url 'contact' %}" class="cta-button">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Ezekiel Ishaya - All Rights Reserved</p>
+    </footer>
+
+    <script src="{% static 'portfolio/js/script.js' %}"></script>
+</body>
+
+</html>
